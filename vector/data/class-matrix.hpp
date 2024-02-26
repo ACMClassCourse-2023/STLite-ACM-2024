@@ -41,7 +41,7 @@ public:
 	Matrix(const Matrix<_Td> &mat)
 		: n_rows(mat.n_rows), n_cols(mat.n_cols), data(mat.data) {}
 	Matrix(Matrix<_Td> &&mat) noexcept
-		: n_rows(mat.n_rows), n_cols(mat.n_cols), data(std::move(mat.data)) {}
+		: n_rows(mat.n_rows), n_cols(mat.n_cols), data(mat.data) {}
 	Matrix<_Td> & operator=(const Matrix<_Td> &rhs)
 	{
 		this->n_rows = rhs.n_rows;
@@ -53,7 +53,7 @@ public:
 	{
 		this->n_rows = rhs.n_rows;
 		this->n_cols = rhs.n_cols;
-		this->data = std::move(rhs.data);
+		this->data = rhs.data;
 		return *this;
 	}
 	inline const size_t & RowSize() const
