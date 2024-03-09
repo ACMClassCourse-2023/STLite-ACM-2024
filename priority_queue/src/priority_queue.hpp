@@ -63,7 +63,7 @@ public:
 
 	}
 	/**
-	 * merge two priority_queues with at least O(logn) complexity.
+	 * merge two priority_queues with at most O(logn) complexity.
 	 * clear the other priority_queue.
 	 */
 	void merge(priority_queue &other) {
